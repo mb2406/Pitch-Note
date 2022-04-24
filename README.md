@@ -7,7 +7,7 @@ and an array of variable parameters to get your sense of pitch trained in no tim
 SETUP:
 1. Follow the instructions to set up your micro:bit, along with all necessary circuitry and accessories.
 Instructions on setting up your micro:bit:
-
+https://pitchnote2022.wordpress.com/setup/
 
 3. Open and flash the py-code.py file onto your micro:bit.
 
@@ -15,6 +15,7 @@ Instructions on setting up your micro:bit:
  
 5. Follow the instructions on how to properly utilise Pitch-Note.
 Instructions on using Pitch-Note:
-
+https://pitchnote2022.wordpress.com/setup/
 
 More information can be found on our website:
+https://pitchnote2022.wordpress.com/
