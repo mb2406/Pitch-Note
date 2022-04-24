@@ -1,96 +1,105 @@
-#N canvas 224 136 875 685 10;
-#X obj -10 -1 cnv 15 548 469 empty empty empty 20 12 0 14 #000000 #404040
+#N canvas 0 0 1920 984 10;
+#X obj 31 19 cnv 15 548 469 empty empty empty 20 12 0 14 #000000 #404040
 0;
-#X obj -3 8 cnv 15 531 452 empty empty empty 20 12 0 14 #e8ffff #404040
+#X obj 38 28 cnv 15 531 452 empty empty empty 20 12 0 14 #e8ffff #404040
 0;
-#X obj 83 228 cnv 15 336 203 empty empty empty 20 12 0 14 #000000 #404040
+#X obj 124 248 cnv 15 336 203 empty empty empty 20 12 0 14 #000000
+#404040 0;
+#X obj 132 257 cnv 15 318 184 empty empty empty 20 12 0 14 #d7ffff
+#404040 0;
+#N canvas 694 252 1065 609 code 1;
+#X obj 3 46 cnv 15 770 407 empty empty empty 20 12 0 14 #000000 #404040
 0;
-#X obj 91 237 cnv 15 318 184 empty empty empty 20 12 0 14 #d7ffff #404040
+#X obj 11 53 cnv 15 754 391 empty empty empty 20 12 0 14 #ffffc6 #404040
 0;
-#N canvas 1128 255 655 592 code 1;
 #X obj 201 86 notein;
 #X floatatom 152 128 5 0 0 0 - - -, f 5;
 #X floatatom 216 126 5 0 0 0 - - -, f 5;
 #X floatatom 278 127 5 0 0 0 - - -, f 5;
 #X obj 69 158 mtof;
 #X floatatom 69 186 5 0 0 0 - - -, f 5;
-#X obj 260 399 dac~;
+#X obj 243 393 dac~;
 #X obj 255 163 / 127;
 #X floatatom 275 200 5 0 0 0 - - -, f 5;
-#X obj 260 326 *~;
+#X obj 236 328 *~;
 #X obj 192 169 osc~;
 #X obj 30 238 phasor~;
-#X obj 81 311 *~;
+#X obj 95 306 *~;
 #X obj 197 272 *~;
 #X msg 208 230 1;
 #X msg 245 218 0;
 #X msg 96 274 1;
 #X msg 141 260 0;
-#X obj 123 196 bng 15 250 50 0 empty osc empty 17 7 0 10 #ff80c0 #ff0080
+#X obj 115 201 bng 15 250 50 0 empty osc empty 17 7 0 10 #ff80c0 #ff0080
 #000000;
 #X obj 102 234 bng 15 250 50 0 empty saw empty 17 7 0 10 #8000ff #400080
 #000000;
-#X obj 141 217 bng 15 250 50 0 empty both empty 17 7 0 10 #008080 #004040
+#X obj 138 225 bng 15 250 50 0 empty both empty 17 7 0 10 #008080 #004040
 #000000;
 #X obj 322 202 vsl 15 128 0 1 0 0 empty vol empty 0 -9 0 10 #fcfcfc
-#000000 #000000 7850 1;
-#X obj 262 362 *~;
-#X connect 0 0 1 0;
-#X connect 0 1 2 0;
-#X connect 0 2 3 0;
-#X connect 1 0 4 0;
-#X connect 2 0 7 0;
-#X connect 4 0 5 0;
-#X connect 5 0 10 0;
-#X connect 5 0 11 0;
-#X connect 7 0 8 0;
-#X connect 8 0 9 1;
-#X connect 9 0 22 0;
-#X connect 10 0 13 0;
-#X connect 11 0 12 0;
-#X connect 12 0 9 0;
-#X connect 13 0 9 0;
-#X connect 14 0 13 1;
-#X connect 15 0 13 1;
-#X connect 16 0 12 1;
-#X connect 17 0 12 1;
-#X connect 18 0 14 0;
-#X connect 18 0 17 0;
-#X connect 19 0 16 0;
-#X connect 19 0 15 0;
-#X connect 20 0 16 0;
-#X connect 20 0 14 0;
-#X connect 21 0 22 1;
-#X connect 22 0 6 0;
-#X connect 22 0 6 1;
-#X restore 468 21 pd code;
-#X obj 322 242 cnv 15 81 174 empty empty empty 20 12 0 14 #aed7ff #404040
-0;
-#X obj 345 273 vsl 30 128 0 1 0 0 vol empty empty 0 -9 0 10 #55c8ff
-#000000 #000000 7850 1;
-#X text 342 250 Volume;
-#X obj 308 233 cnv 15 8 193 empty empty empty 20 12 0 14 #000000 #404040
-0;
-#X obj 95 242 cnv 15 205 174 empty empty empty 20 12 0 14 #aed7ff #404040
-0;
-#X text 118 265 Sin Wave;
-#X obj 118 284 bng 50 250 50 0 osc empty empty 17 7 0 10 #ff80c0 #ff0080
-#000000;
-#X text 158 244 SYNTHESIZER;
-#X text 202 265 Saw-tooth Wave;
-#X obj 218 284 bng 50 250 50 0 saw empty empty 17 7 0 10 #8000ff #400080
-#000000;
-#X text 151 342 Sin x Saw Wave;
-#X obj 168 361 bng 50 250 50 0 both empty empty 17 7 0 10 #008080 #004040
-#000000;
-#X obj 64 22 cnv 15 380 183 empty empty empty 20 12 0 14 #aed7ff #404040
-0;
-#X obj 59 17 cnv 15 391 194 empty empty empty 20 12 0 14 #000000 #404040
-0;
-#X text 77 158 You can switch the playback synthesizer type and control
-volume levels using the objects below. Enjoy!;
-#X text 78 111 Once you are set up \, learn how to use the device here:
+#000000 #000000 0 1;
+#X obj 246 360 *~;
+#X text 371 196 Buttons control which synth time is being used by muting/unmuting
+the unwanted/wanted synth type respectively.;
+#X text 371 165 MIDI input is converted into correct frequency.;
+#X text 370 241 MIDI noteOff input mutes synth output so that audio
+playback stops when button is lifted.;
+#X text 368 285 Master volume controls volume output of entire system.
 ;
-#X text 77 57 Welcome to Pitch Note \, an audio pitch training device.
+#X connect 2 0 3 0;
+#X connect 2 1 4 0;
+#X connect 2 2 5 0;
+#X connect 3 0 6 0;
+#X connect 4 0 9 0;
+#X connect 6 0 7 0;
+#X connect 7 0 12 0;
+#X connect 7 0 13 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 1;
+#X connect 11 0 24 0;
+#X connect 12 0 15 0;
+#X connect 13 0 14 0;
+#X connect 14 0 11 0;
+#X connect 15 0 11 0;
+#X connect 16 0 15 1;
+#X connect 17 0 15 1;
+#X connect 18 0 14 1;
+#X connect 19 0 14 1;
+#X connect 20 0 16 0;
+#X connect 20 0 19 0;
+#X connect 21 0 18 0;
+#X connect 21 0 17 0;
+#X connect 22 0 18 0;
+#X connect 22 0 16 0;
+#X connect 23 0 24 1;
+#X connect 24 0 8 0;
+#X connect 24 0 8 1;
+#X restore 513 40 pd code;
+#X obj 362 257 cnv 15 88 184 empty empty empty 20 12 0 14 #aed7ff #404040
+0;
+#X obj 389 293 vsl 30 128 0 1 0 0 vol empty empty 0 -9 0 10 #55c8ff
+#000000 #000000 0 1;
+#X text 385 270 Volume;
+#X obj 343 253 cnv 15 19 193 empty empty empty 20 12 0 14 #000000 #404040
+0;
+#X obj 132 257 cnv 15 210 184 empty empty empty 20 12 0 14 #aed7ff
+#404040 0;
+#X text 159 285 Sin Wave;
+#X obj 159 304 bng 50 250 50 0 osc empty empty 17 7 0 10 #ff80c0 #ff0080
+#000000;
+#X text 199 264 SYNTHESIZER;
+#X text 243 285 Saw-tooth Wave;
+#X obj 259 304 bng 50 250 50 0 saw empty empty 17 7 0 10 #8000ff #400080
+#000000;
+#X text 192 362 Sin x Saw Wave;
+#X obj 209 381 bng 50 250 50 0 both empty empty 17 7 0 10 #008080 #004040
+#000000;
+#X obj 105 41 cnv 15 380 183 empty empty empty 20 12 0 14 #aed7ff #404040
+0;
+#X text 118 178 You can switch the playback synthesizer type and control
+volume levels using the objects below. Enjoy!;
+#X text 119 131 Once you are set up \, learn how to use the device
+here:;
+#X text 118 77 Welcome to Pitch Note \, an audio pitch training device.
 To get set up \, follow this link:;
-#X text 222 28 PITCH NOTE;
+#X text 263 48 PITCH NOTE;
