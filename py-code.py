@@ -68,11 +68,16 @@ high_display = Image("00000:" "00008:" "88888:" "00008:" "00000")
 
 # Plays a low C on startup/reset - default octave range is low.
 
+display.show(Image.HAPPY)
+sleep(1000)
+display.clear()
+sleep(1000)
 midiNoteOn(0, 48, 127)
 display.show(low_display)
 sleep(1000)
 midiNoteOff(0, 48, 127)
-display.show(Image.HAPPY)
+display.clear()
+sleep(1000)
 
 # Code which switches octaves on button B press;
 
@@ -137,7 +142,7 @@ while start is True:
         if c is False:              # Only displays note type when button C is not
             display.show(c_note)    # pressed.
         pot_note = 48
-    if pot >= 86 and pot <= 170:
+    if pot >= 86 and pot <= 170:    # Converts potentiometer value into MIDI number.
         if c is False:
             display.show(cs_note)
         pot_note = 49
