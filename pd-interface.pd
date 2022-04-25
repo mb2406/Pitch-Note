@@ -96,10 +96,11 @@ playback stops when button is lifted.;
 #000000;
 #X obj 105 41 cnv 15 380 183 empty empty empty 20 12 0 14 #aed7ff #404040
 0;
-#X text 118 178 You can switch the playback synthesizer type and control
-volume levels using the objects below. Enjoy!;
-#X text 119 131 Once you are set up \, learn how to use the device
-here:;
-#X text 118 77 Welcome to Pitch Note \, an audio pitch training device.
-To get set up \, follow this link:;
 #X text 263 48 PITCH NOTE;
+#X text 116 83 Welcome to Pitch Note \, an audio pitch training device.
+To get set up and learn how to use the device \, follow this link:
+https://pitchnote2022.wordpress.com/setup/;
+#X text 110 145 You can switch the playback synthesizer type and control
+volume levels using the objects below. Make sure to select a synthesizer
+type and move the volume slider up before trying any audio playback.
+Enjoy!;
