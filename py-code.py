@@ -3,18 +3,18 @@ from microbit import *
 # Setting up paramaters to allow and control MIDI data being sent to PurrData.
 
 def midiNoteOn(chan, n, vel):
-    MIDI_NOTE_ON = 0x90
-    if chan > 15:
-        return
+    MIDI_NOTE_ON = 0x90             # Hexadecimal value for 'NOTE-ON'.
+    if chan > 15:                   # 'If' statements in place to abort function if
+        return                      # input variables aren't correct.
     if n > 127:
         return
     if vel > 127:
         return
-    msg = bytes([MIDI_NOTE_ON | chan, n, vel])
-    uart.write(msg)
+    msg = bytes([MIDI_NOTE_ON | chan, n, vel])    # Holds the full MIDI message.
+    uart.write(msg)                               # Sends data down MIDI cable.
 
 def midiNoteOff(chan, n, vel):
-    MIDI_NOTE_OFF = 0x80
+    MIDI_NOTE_OFF = 0x80              # Hexadecimal value for 'NOTE-OFF'.
     if chan > 15:
         return
     if n > 127:
